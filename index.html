@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Podcast Preview App – DJS02</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+
+    <!-- ── App Header ─────────────────────────────────────────── -->
+    <header>
+      <h1>🎙 Podcast Preview</h1>
+    </header>
+
+    <!-- ── Controls Bar ───────────────────────────────────────── -->
+    <section class="controls" aria-label="Search, filter and sort podcasts">
+
+      <label for="searchInput">Search</label>
+      <input
+        type="search"
+        id="searchInput"
+        placeholder="Search by title…"
+        aria-label="Search podcasts by title"
+        autocomplete="off"
+      />
+
+      <label for="genreFilter">Genre</label>
+      <select id="genreFilter" aria-label="Filter by genre">
+        <option value="">All Genres</option>
+        <!-- Options injected by app.js -->
+      </select>
+
+      <label for="sortSelect">Sort</label>
+      <select id="sortSelect" aria-label="Sort podcasts">
+        <option value="az">A → Z</option>
+        <option value="za">Z → A</option>
+        <option value="newest">Recently Updated</option>
+        <option value="oldest">Oldest Updated</option>
+      </select>
+
+    </section>
+
+    <!-- ── Podcast Grid ────────────────────────────────────────── -->
+    <main>
+      <div
+        id="podcastGrid"
+        role="list"
+        aria-label="Podcast preview cards"
+      ></div>
+    </main>
+
+    <!-- ── Modal Overlay ──────────────────────────────────────── -->
+    <div
+      id="modalOverlay"
+      class="hidden"
+      role="dialog"
+      aria-modal="true"
+      aria-labelledby="modalTitle"
+    >
+      <!-- ── Modal Box ───────────────────────────────────────── -->
+      <div id="modal" class="hidden">
+
+        <!-- Cover image + close button -->
+        <div class="modal-header">
+          <img id="modalImage" src="" alt="" />
+          <button id="modalClose" aria-label="Close modal">✕</button>
+        </div>
+
+        <!-- Detail content -->
+        <div class="modal-body">
+          <h2 id="modalTitle"></h2>
+          <div id="modalGenres"></div>
+          <p id="modalDesc"></p>
+          <span id="modalUpdated"></span>
+
+          <h3 class="season-heading">Seasons</h3>
+          <ul id="seasonList"></ul>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- ── App entry point ─────────────────────────────────────── -->
+    <script type="module" src="app.js"></script>
+
+  </body>
+</html>

@@ -14,7 +14,6 @@ A reusable, encapsulated custom HTML element (`<podcast-card>`) that displays a 
 - [Component API Reference](#component-api-reference)
 - [Design Principles](#design-principles)
 - [Running the Demo](#running-the-demo)
-- [Browser Compatibility](#browser-compatibility)
 
 ---
 
@@ -209,20 +208,6 @@ The demo page includes:
 - Sorting (A→Z, Z→A, newest/oldest updated)
 - A detail modal that opens on card click (wired via `podcast-selected`)
 - Full keyboard navigation support
-
----
-
-## Browser Compatibility
-
-| Feature          | Chrome | Firefox | Safari | Edge |
-|------------------|--------|---------|--------|------|
-| Custom Elements  | ✅ 67+ | ✅ 63+  | ✅ 14+ | ✅ 79+ |
-| Shadow DOM       | ✅ 53+ | ✅ 63+  | ✅ 14+ | ✅ 79+ |
-| ES Modules       | ✅ 61+ | ✅ 60+  | ✅ 11+ | ✅ 16+ |
-| Custom Events    | ✅     | ✅      | ✅     | ✅     |
-| `aspect-ratio`   | ✅ 88+ | ✅ 89+  | ✅ 15+ | ✅ 88+ |
-
-> All modern browsers are supported. No polyfills are required.
 
 ---
 
